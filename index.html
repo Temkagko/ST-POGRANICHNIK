@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>СТ «ПОГРАНИЧНИК»</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        color: #222;
+    }
+
+    /* ШАПКА */
+    header {
+        background: #123d2a;
+        color: white;
+        text-align: center;
+        padding: 28px 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    /* МЕНЮ */
+    nav {
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        display: block;
+        padding: 16px 18px;
+        color: #222;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: #123d2a;
+        color: white;
+    }
+
+    /* ГЛАВНЫЙ БЛОК */
+    .hero {
+        min-height: 430px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        padding: 40px 20px;
+
+        background:
+            linear-gradient(
+                rgba(18, 61, 42, 0.78),
+                rgba(18, 61, 42, 0.78)
+            ),
+            url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        color: white;
+    }
+
+    .hero h2 {
+        font-size: 44px;
+        margin-bottom: 18px;
+    }
+
+    .hero p {
+        font-size: 19px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 14px 28px;
+
+        background: #e3b341;
+        color: #222;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+        background: #f0c85b;
+    }
+
+    /* ОСНОВНОЙ КОНТЕНТ */
+    .container {
+        width: 100%;
+        max-width: 1100px;
+
+        margin: 0 auto;
+        padding: 55px 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        color: #123d2a;
+        margin-bottom: 10px;
+    }
+
+    .section-title p {
+        color: #666;
+    }
+
+    /* КАРТОЧКИ */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+
+        padding: 25px;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.08);
+
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+    .card h3 {
+        color: #123d2a;
+        margin-bottom: 12px;
+        font-size: 21px;
+    }
+
+    .card p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* ПОДВАЛ */
+    footer {
+        background: #123d2a;
+        color: white;
+
+        text-align: center;
+
+        padding: 28px 15px;
+        margin-top: 30px;
+    }
+
+    footer p {
+        margin: 5px 0;
+        opacity: 0.9;
+    }
+
+    /* ТЕЛЕФОН */
+    @media (max-width: 800px) {
+
+        header {
+            padding: 22px 15px;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        header p {
+            font-size: 14px;
+        }
+
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        nav a {
+            padding: 13px;
+        }
+
+        .hero {
+            min-height: 380px;
+            padding: 30px 18px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .container {
+            padding: 40px 15px;
+        }
+
+        .section-title h2 {
+            font-size: 26px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 22px;
+        }
+    }
+
+    /* ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ */
+    @media (max-width: 400px) {
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+            max-width: 280px;
+        }
+    }
+</style>
+
+<head>
+
+    <body>
+        <!-- ШАПКА -->
+<header>
+
+    <h1>СТ «ПОГРАНИЧНИК»</h1>
+
+    <p>
+        Садоводческое товарищество
+    </p>
+
+</header>
+
+
+<!-- МЕНЮ -->
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Главная
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                О нас
+            </a>
+        </li>
+
+        <li>
+            <a href="news.html">
+                Новости
+            </a>
+        </li>
+
+        <li>
+            <a href="documents.html">
+                Документы
+            </a>
+        </li>
+
+        <li>
+            <a href="payments.html">
+                Взносы
+            </a>
+        </li>
+
+        <li>
+            <a href="articles.html">
+                Статьи
+            </a>
+        </li>
+
+        <li>
+            <a href="contacts.html">
+                Контакты
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+            Добро пожаловать!
+        </h2>
+
+        <p>
+            Официальный информационный сайт
+            садоводческого товарищества
+            «ПОГРАНИЧНИК».
+        </p>
+
+        <a
+            href="about.html"
+            class="button"
+        >
+            Узнать больше
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main class="container">
+
+    <div class="section-title">
+
+        <h2>
+            СТ «ПОГРАНИЧНИК»
+        </h2>
+
+        <p>
+            Вся важная информация в одном месте
+        </p>
+
+    </div>
+
+
+    <!-- КАРТОЧКИ -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                📰 Новости
+            </h3>
+
+            <p>
+                Здесь будут размещаться новости,
+                объявления и важная информация
+                для членов товарищества.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                📄 Документы
+            </h3>
+
+            <p>
+                Устав, решения собраний,
+                документы товарищества и другие
+                необходимые материалы.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                💰 Взносы
+            </h3>
+
+            <p>
+                Информация о размерах взносов,
+                сроках оплаты и способах
+                внесения платежей.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ПОДВАЛ -->
+<footer>
+
+    <p>
+        © 2026 СТ «ПОГРАНИЧНИК»
+    </p>
+
+    <p>
+        Официальный информационный сайт
+    </p>
+
+</footer>
+
+</body>
+</html>

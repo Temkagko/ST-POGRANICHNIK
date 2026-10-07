@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Контакты — СТ «ПОГРАНИЧНИК»</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        color: #222;
+    }
+
+    header {
+        background: #123d2a;
+        color: white;
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    header p {
+        margin: 8px 0 0;
+        color: #e3b341;
+        font-size: 17px;
+    }
+
+    nav {
+        background: #0d2d20;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 16px;
+        font-size: 15px;
+    }
+
+    nav a:hover {
+        background: #e3b341;
+        color: #123d2a;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .title h2 {
+        color: #123d2a;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .title p {
+        color: #666;
+    }
+
+    .contacts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h3 {
+        color: #123d2a;
+        margin-top: 0;
+        font-size: 21px;
+    }
+
+    .card p {
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .card strong {
+        color: #222;
+    }
+
+    .important {
+        margin-top: 25px;
+        background: #123d2a;
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .important h3 {
+        color: #e3b341;
+        margin-top: 0;
+    }
+
+    footer {
+        margin-top: 50px;
+        background: #123d2a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    @media (max-width: 800px) {
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav {
+            flex-direction: column;
+        }
+
+        nav a {
+            text-align: center;
+            padding: 12px;
+        }
+
+        .contacts {
+            grid-template-columns: 1fr;
+        }
+
+        .title h2 {
+            font-size: 27px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>СТ «ПОГРАНИЧНИК»<h1>
+            <p>Садоводческое товарищество</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="news.html">Новости</a>
+            <a href="documents.html">Документы</a>
+            <a href="payments.html">Взносы</a>
+            <a href="articles.html">Статьи</a>
+            <a href="contacts.html">Контакты</a>
+            </nav>
+
+            <div class="title">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с правлением СТ «ПОГРАНИЧНИК»</p>
+            </div>
+            
+            <div class="contacts">
+            
+                <div class="card">
+                    <h3>📍 Адрес</h3>
+                    <p>
+                        <strong>СТ «ПОГРАНИЧНИК»</strong><br>
+                        Республика Беларусь<br>
+                        Смолевический район, Минская область
+                    </p>
+                </div>
+            
+                <div class="card">
+                    <h3>📞 Телефон</h3>
+                    <p>
+                        Телефон председателя:<br>
+                        <strong>+375 (29) 655-96-22</strong>
+                    </p>
+                </div>
+            
+                <div class="card">
+                    <h3>✉️ Электронная почта</h3>
+                    <p>
+                        Email товарищества:<br>
+                        <strong>example@gmail.by</strong>
+                    </p>
+                </div>
+            
+                <div class="card">
+                    <h3>🕐 Время работы</h3>
+                    <p>
+                        Понедельник — Пятница<br>
+                        <strong>09:00 — 20:00</strong><br><br>
+                        Суббота — Воскресенье<br>
+                        <strong>Выходной</strong>
+                    </p>
+                </div>
+            
+            </div>
+            
+            <div class="important">
+                <h3>📢 Важно</h3>
+                <p>
+                    По вопросам взносов, документов, участков и других вопросов
+                    обращайтесь к правлению садоводческого товарищества.
+                </p>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 СТ «ПОГРАНИЧНИК». Все права защищены.
+</footer>
+
+</body>
+</html>
